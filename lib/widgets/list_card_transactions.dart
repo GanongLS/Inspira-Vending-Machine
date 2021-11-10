@@ -11,15 +11,7 @@ class ListCardTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Menu> listMenu = transaction.transaction.isNotEmpty ? transaction.transaction : [];
-    int best = 0;
-    for (var e in listMenu) {
-      if (e.total > best) {
-        best = e.total;
-      }
-    }
-    debugPrint(best.toString());
-    final topMenu = listMenu.firstWhere((el) => el.total == best);
-    String image = topMenu.food.imageAssetLink;
+    String image = listMenu.isNotEmpty ? listMenu.first.food.imageAssetLink : 'assets/foods/coklat.jpg';
     String formattedDate = DateFormat('yyyy-MM-dd – kk:mm').format(transaction.date);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),

@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -18,8 +19,8 @@ class ListCardVendings extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AppState>(context);
     final trx = Provider.of<AppState>(context).transaction;
-    debugPrint(trx.toString());
-    inspect(trx);
+    // debugPrint(trx.toString());
+    // inspect(trx);
     final _id = trx.isNotEmpty ? trx.indexWhere((e) => e.food.name == food.name) : -1;
     final _total = _id > -1 ? trx[_id].total.toString() : "0";
     return SizedBox(
