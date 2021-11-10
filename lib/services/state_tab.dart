@@ -12,7 +12,7 @@ class AppState extends ChangeNotifier {
   List<Transaction> transactionHistory = [];
   int balance = 150000;
   AppState() {
-    onOrder();
+    openAccount();
   }
 
   void changeToTransactions() {

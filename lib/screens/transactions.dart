@@ -10,7 +10,6 @@ class Transactions extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AppState>(context);
     List<Transaction> history = provider.transactionHistory;
-    
 
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 4),
