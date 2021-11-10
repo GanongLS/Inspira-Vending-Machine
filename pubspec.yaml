@@ -1,0 +1,42 @@
+name: inspira_vm
+description: A new Flutter project.
+
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  provider: ^6.0.1
+  flutter_svg: ^0.23.0+1
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/foods/
+
+  fonts:
+    - family: Circular Std
+      fonts:
+        - asset:  fonts/Circular Std Book.ttf
+        - asset:  fonts/Circular Std Bold.ttf
+          weight: 700
